@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@ffmpeg-installer/ffmpeg": "^1.0.20",
+    "@ffprobe-installer/ffprobe": "^1.0.12",
     "@types/fluent-ffmpeg": "^2.1.11",
     "fluent-ffmpeg": "^2.1.2"
   }
