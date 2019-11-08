@@ -1,8 +1,8 @@
 var childProcess = require('child_process');
 var path = require('path');
-const videoName = '坐上小火車去郊遊.mp4';
-const filePath = path.join('./video2', videoName);
-const filePath2 = path.join('./output', videoName);
+const videoName = '【聖誕節🎅】鯊魚一家都愛吃糖🍭鯊魚寶寶喜歡吃甜的BabyShark+更多合輯_兒童卡通動畫_幼兒音樂歌曲_兒歌_童謠_動畫片_卡通片_寶寶巴士_奇奇-EdxogCbQ6xE.mp4';
+const filePath = path.join('./VideoOverLay', videoName);
+const filePath2 = path.join('./VideoAddLogo', videoName);
 const addTopLogo = `ffmpeg -y -i ${filePath} -vf "movie='./logo.png' [watermark];[in][watermark] overlay=21:7 [out]" ${filePath2}`;
 const addBottomLogo = `ffmpeg -y -i ${filePath} -vf "movie='./logo.png' [watermark];[in][watermark]  overlay=21:563 [out]" ${filePath2}`;
 

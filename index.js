@@ -9,7 +9,7 @@ const endTimeArr = ['00:02:49', '00:04:56', '00:06:21', '00:10:40']; // 视频�
 
 startTimeArr.forEach((startTime, index)=>{
     const duration = getDuration(startTime, endTimeArr[index]);
-    FfmpegCommand(`./video2/${originVideo}`)
+    FfmpegCommand(`./VideoAddLogo/${originVideo}`)
         .setStartTime(startTime)
         .setDuration(duration)
         .output(`./output/${videoNames[index]}.mp4`)

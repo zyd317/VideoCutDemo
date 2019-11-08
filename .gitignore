@@ -1,4 +1,4 @@
 /output/
-/video2/
 /node_modules/
-/.idea/
+.idea/
+*.mp4
