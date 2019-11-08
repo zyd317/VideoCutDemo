@@ -1,10 +1,10 @@
 const { spawn } = require('child_process');
 var path = require('path');
 const {videoName} = require('./Config');
-const filePath = path.join('./VideoOverLay', videoName);
-const filePath2 = path.join('./VideoAddLogo', videoName);
-const addTopLogo = `ffmpeg -y -i ${filePath} -vf "movie='./logo.png' [watermark];[in][watermark] overlay=21:7 [out]" ${filePath2}`;
-const addBottomLogo = `ffmpeg -y -i ${filePath} -vf "movie='./logo.png' [watermark];[in][watermark]  overlay=21:563 [out]" ${filePath2}`;
+const originPath = path.join('./VideoOverLay', videoName);
+const addLogoPath = path.join('./VideoAddLogo', videoName);
+const addTopLogo = `ffmpeg -y -i ${originPath} -vf "movie='./logo.png' [watermark];[in][watermark] overlay=21:7 [out]" ${addLogoPath}`;
+const addBottomLogo = `ffmpeg -y -i ${originPath} -vf "movie='./logo.png' [watermark];[in][watermark]  overlay=21:563 [out]" ${addLogoPath}`;
 const command = addTopLogo;
 console.log('：：：：开始处理去添加水印操作：：：：\n', command);
 
