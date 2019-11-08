@@ -1,8 +1,8 @@
 # VideoCutDemo
 
 ## install
-npm i // 安装依赖
-brwe install ffmpeg // TODO 去和加水印没找到node版本的，先使用命令行处理水印
+- npm i // 安装依赖
+- brwe install ffmpeg // TODO 去和加水印没找到node版本的，先使用命令行处理水印
 
 ## start
 - 拉去资源：youtube-dl ${videoPath}
