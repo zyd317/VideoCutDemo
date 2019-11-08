@@ -3,6 +3,7 @@ var FfmpegCommand = require('fluent-ffmpeg');
 FfmpegCommand.setFfmpegPath(ffmpegPath);
 const {videoName: originVideo, videoNames, startTimeArr, endTimeArr} = require('./Config');
 
+console.log('：：：：开始处理切片操作：：：：\n');
 startTimeArr.forEach((startTime, index)=>{
     const duration = getDuration(startTime, endTimeArr[index]);
     FfmpegCommand(`./VideoAddLogo/${originVideo}`)

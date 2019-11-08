@@ -1,8 +1,7 @@
 # VideoCutDemo
 
 ## install
-npm i @ffmpeg-installer/ffmpeg
-npm i fluent-ffmpeg
+npm i // 安装依赖
 brwe install ffmpeg // TODO 去和加水印没找到node版本的，先使用命令行处理水印
 
 ## start
@@ -13,6 +12,7 @@ brwe install ffmpeg // TODO 去和加水印没找到node版本的，先使用命
 - 将处理好的视频切片：在index.js中配置originVideo原视频名称 -> videoNames 每个切片的视频名称 -> startTimeArr切片开始的时间 -> endTimeArr切片结束的时间 
 
 ## 目录
+```
 .
 ├── VideoOrigin 存放原视频视频
 ├── VideoOverLay 存放去水印的视频
@@ -24,3 +24,4 @@ brwe install ffmpeg // TODO 去和加水印没找到node版本的，先使用命
 ├── logoAdd.js 加logo
 ├── index.js 切片
 └── rename.js 文件呢批量重命名
+```

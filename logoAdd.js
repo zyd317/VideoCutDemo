@@ -5,8 +5,10 @@ const filePath = path.join('./VideoOverLay', videoName);
 const filePath2 = path.join('./VideoAddLogo', videoName);
 const addTopLogo = `ffmpeg -y -i ${filePath} -vf "movie='./logo.png' [watermark];[in][watermark] overlay=21:7 [out]" ${filePath2}`;
 const addBottomLogo = `ffmpeg -y -i ${filePath} -vf "movie='./logo.png' [watermark];[in][watermark]  overlay=21:563 [out]" ${filePath2}`;
+const command = addTopLogo;
+console.log('：：：：开始处理去添加水印操作：：：：\n', command);
 
-const args = addTopLogo.split(' ');
+const args = command.split(' ');
 args.shift();
 const ffmpeg = spawn('ffmpeg', args);
 
