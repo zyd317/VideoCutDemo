@@ -9,7 +9,7 @@
 - 在Config.js配置资源名称等信息
 - 去水印：在overLay.js输入videoName需要去水印的文件名 `node overLay.js`
 - 加水印：在logoAdd.js输入videoName需要加水印的文件名 `node logoAdd.js`
-- 将处理好的视频切片：在index.js中配置originVideo原视频名称 -> videoNames 每个切片的视频名称 -> startTimeArr切片开始的时间 -> endTimeArr切片结束的时间 
+- 将处理好的视频切片 `node cutVideo.js`
 
 ## 目录
 ```
@@ -22,6 +22,6 @@
 ├── Config.js 视频信息配置
 ├── overLay.js 去水印脚本
 ├── logoAdd.js 加logo
-├── index.js 切片
+├── cutVideo.js 切片
 └── rename.js 文件呢批量重命名
 ```
