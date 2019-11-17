@@ -1,7 +1,7 @@
 const { spawn } = require('child_process');
 var path = require('path');
 const {videoName} = require('./Config');
-const originPath = path.join('./output', videoName);
+const originPath = path.join('./VideoOrigin', videoName);
 const overLaypath = path.join('./VideoOverLay', videoName);
 const clearTopLogo = `ffmpeg -i ${originPath} -b:v 548k -vf delogo=x=21:y=7:w=132:h=152 ${overLaypath}`;
 const clearBottomLogo = `ffmpeg -i ${originPath} -b:v 548k -vf delogo=x=21:y=563:w=132:h=152:show=0 ${overLaypath}`;

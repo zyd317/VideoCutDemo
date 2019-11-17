@@ -1,12 +1,12 @@
 var fs = require('fs');
-var PATH = './video2'; // 目录
+var PATH = './VideoOrigin'; // 目录
 
 //  遍历目录得到文件信息
 function walk(path, callback) {
     var files = fs.readdirSync(path);
-    files.forEach(function(file){
+    files.forEach(function(file, index){
         if (fs.statSync(path + '/' + file).isFile() && /\.mp4/.test(file)) {
-            callback(path, file);
+            callback(path, file, index);
         }
     });
 }
@@ -19,11 +19,10 @@ function rename (oldPath, newPath) {
         }
     });
 }
-
 // 运行
-walk(PATH, function (path, fileName) {
+walk(PATH, function (path, fileName, index) {
     var oldPath = path + '/' + fileName, // 源文件路径
-        newPath = path + '/'+ fileName.replace(/\s/g, ''); // 新路径
+        newPath = path + '/'+ `${index}.mp4`; // 新路径
 
     rename(oldPath, newPath);
 });

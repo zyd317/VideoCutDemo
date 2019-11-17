@@ -4,12 +4,13 @@ FfmpegCommand.setFfmpegPath(ffmpegPath);
 const {videoName: originVideo, videoNames, startTimeArr, endTimeArr} = require('./Config');
 
 console.log('：：：：开始处理切片操作：：：：\n');
-startTimeArr.forEach((startTime, index)=>{
+videoNames.forEach((videoName, index)=>{
+    const startTime = startTimeArr[index];
     const duration = getDuration(startTime, endTimeArr[index]);
     FfmpegCommand(`./VideoAddLogo/${originVideo}`)
         .setStartTime(startTime)
         .setDuration(duration)
-        .output(`./output/${videoNames[index]}.mp4`)
+        .output(`./output/${videoName}.mp4`)
         .on('start', function () {
             console.log('----start----')
         })
